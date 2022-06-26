@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h4 v-show="email">Send an email to: {{email}}</h4>
         <form action="">
             <div>
                 <label for="">Name</label>
@@ -26,11 +25,6 @@
         components: {
             InputText,
             ButtonSubmit,
-        },
-        data() {
-            return {
-                email: 'uadson@uadson.com',
-            }
         }
     }
 </script>
