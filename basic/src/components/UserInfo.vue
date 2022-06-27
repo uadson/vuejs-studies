@@ -1,12 +1,27 @@
 <template>
     <div>
-        <p v-if="is_working"> I'm working</p>
-        <p v-else>I'm looking for news oportunities</p>
-        <p>I used the tecnologies:</p>
-        <ul>
-            <li>Python</li>
-            <li>Javascript</li>
-        </ul>
+        <div>
+            <p v-if="is_working"> I'm working</p>
+            <p v-else>I'm looking for news oportunities</p>
+            <p>I used the technologies for backend:</p>
+        </div>
+        <div>
+            <ul style="list-style: none;">
+                <li v-for="(tech, index) in backend" v-bind:key="index">
+                    {{ tech }}
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p>And I used the technolies for frontend:</p>
+        </div>
+        <div>
+            <ul style="list-style: none;">
+                <li v-for="tech in frontend" :key="tech.id">
+                    {{ tech.framework }}
+                </li>
+            </ul>
+        </div>
         <div>
             <MyPictures />
             <p class="portfolio">To access my portfolio <a v-bind:href="portfolio" target="_blank">click here</a></p>
@@ -35,6 +50,14 @@ export default {
             email: 'uadson@uadson.com',
             portfolio: 'https://github.com/uadson',
             btnText: 'Show Email',
+            // list or array
+            backend: ['Python', 'Django', 'Django Rest Framework'],
+            // dict or objects
+            frontend: [
+                {
+                    id:1,framework: 'Vue',
+                }
+            ]
         }
     },
     methods: {

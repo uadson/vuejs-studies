@@ -33,6 +33,7 @@ export default {
   body {
     background-color: #333;
     color: #FFF;
+    font-family: sans-serif;
   }
 
   a {
