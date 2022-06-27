@@ -25,6 +25,9 @@
             <!-- -->
         </div>
         <div>
+            <MultEvents />
+        </div>
+        <div>
             <MyPictures />
             <p class="portfolio">To access my portfolio <a v-bind:href="portfolio" target="_blank">click here</a></p>
         </div>
@@ -39,10 +42,12 @@
 
 <script>
 import MyPictures from './MyPictures.vue'
+import MultEvents from './MultEvents.vue'
 
 export default {
     name: 'UserInfo',
     components: {
+        MultEvents,
         MyPictures,
     },
     data(){
