@@ -6,6 +6,7 @@
             <p>I used the technologies for backend:</p>
         </div>
         <div>
+            <!-- V-FOR -->
             <ul style="list-style: none;">
                 <li v-for="(tech, index) in backend" v-bind:key="index">
                     {{ tech }}
@@ -21,6 +22,7 @@
                     {{ tech.framework }}
                 </li>
             </ul>
+            <!-- -->
         </div>
         <div>
             <MyPictures />
