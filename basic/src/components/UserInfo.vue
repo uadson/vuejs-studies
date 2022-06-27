@@ -9,7 +9,7 @@
         </ul>
         <div>
             <MyPictures />
-            <p>To access my portfolio <a v-bind:href="portfolio" target="_blank">click here</a></p>
+            <p class="portfolio">To access my portfolio <a v-bind:href="portfolio" target="_blank">click here</a></p>
         </div>
         <div>
             <button @click="showEmail">{{ btnText }}</button>
