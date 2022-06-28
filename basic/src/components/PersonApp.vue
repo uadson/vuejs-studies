@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>This is a description about person: {{ person }}</h3>
-        <UserInfo /><hr>
+        <UserInfo :location="location" :is_working='false' /><hr>
         <UserForm />
     </div>
 </template>
@@ -18,7 +18,8 @@
         },
         data(){
             return{
-                person: 'Uadson'
+                person: 'Uadson',
+                location: "I'm from Goiânia, Goiás, Brazil."
             }
         }
     }

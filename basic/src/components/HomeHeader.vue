@@ -3,12 +3,17 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#" v-show="is_logged">Profile</a></li>
     </ul>
 </template>
 
 <script>
 export default {
     name: 'HomeHeader',
+
+    props: {
+        is_logged: Boolean,
+    }
 }
 </script>
 

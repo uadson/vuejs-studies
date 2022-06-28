@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <HomeHeader /><hr>
+    <HomeHeader :is_logged='true' /><hr>
     <ReusableVue />
     <BaseProject />
     <ReusableVue />
@@ -30,7 +30,8 @@ export default {
     LifeCycle,
     PersonApp,
     ReusableVue,
-}
+},
+
 }
 </script>
 

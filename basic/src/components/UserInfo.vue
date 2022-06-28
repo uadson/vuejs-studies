@@ -1,6 +1,7 @@
 <template>
     <div>
         <div>
+            <p>{{ location }}</p>
             <p v-if="is_working"> I'm working</p>
             <p v-else>I'm looking for news oportunities</p>
             <p>I used the technologies for backend:</p>
@@ -46,13 +47,19 @@ import MultEvents from './MultEvents.vue'
 
 export default {
     name: 'UserInfo',
+    
     components: {
         MultEvents,
         MyPictures,
     },
+    
+    props: {
+        location: String,
+        is_working: Boolean
+    },
+
     data(){
         return{
-            is_working: true,
             show_email: false,
             email: 'uadson@uadson.com',
             portfolio: 'https://github.com/uadson',
